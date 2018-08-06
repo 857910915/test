@@ -66,5 +66,6 @@ public class StringDemo1 {
 		}
 		//替换
 		System.out.println(str.replace("提笔", "执笔"));
+		
 	}
 }
