@@ -6,7 +6,6 @@ public class StringBuilderDemo {
 	 * 		1.可变字符串，内容改变，但引用地址不会改变
 	 * 		2.StringBuilder它不是线程安全的，不支持同步，读写速度比较快，一般情况下，不考虑线程安全的情况下，我们尽可能的使用该类
 	 * 		3.该类和StringBuffer功能一样，唯一的区别是Stringbuffer现成安全，就是性能比较差
-	 * 
 	 * */
 	public static void main(String[] args) {
 		
