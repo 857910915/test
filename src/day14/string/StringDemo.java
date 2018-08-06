@@ -41,6 +41,6 @@ public class StringDemo {
 		if ("".equals(str5)) {
 			System.out.println("内容为空");
 		}
-		System.out.println(str);
+		//System.out.println(str);
 	}
 }
