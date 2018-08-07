@@ -25,7 +25,4 @@ public class Practice {
 			System.out.print(tem+"\t");
 		}
 	}
-
-
-
 }
