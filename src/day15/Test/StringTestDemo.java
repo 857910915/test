@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StringTestDemo {
 	public static void main(String[] args) {
-		//初始化键盘录入对象
+		/*//初始化键盘录入对象
 		Scanner in=new Scanner(System.in);
 		System.out.print("请输入用户名:");
 		String name=in.next();
@@ -29,13 +29,14 @@ public class StringTestDemo {
 		while (!judgeQQ(qq)) {
 			System.out.println("请输入正确的QQ号码！");
 			qq=in.next();
-		}
+		}*/
 		//分割字符串
-		String str="蒹葭苍苍,白鹭为霜,所谓伊人,再水一方";
+		String str="11蒹葭苍苍,白鹭为霜,所谓伊人,再水一方1111";
 		cutString(str);
 
 		//替换字符串
-		//replace(str);
+		System.out.println(replace(str,"Java"));
+
 	}
 	//1.用户名是6-16位，可以是字母数字下划线
 	//判断用户名是否符合要求
@@ -106,7 +107,6 @@ public class StringTestDemo {
 			}
 		}
 		return true;
-
 	}
 	//4.“蒹葭苍苍,白鹭为霜,所谓伊人,再水一方”以逗号来分割字符串 
 	public static void cutString(String str) {
@@ -116,19 +116,36 @@ public class StringTestDemo {
 		}
 	}
 	//5.第四题中文本 替换叠词为，"Java"
-	public static void replace(String str) {
-		//获取每个元素的char字符
-		char []ch=new char[str.length()];
-		for (int i = 0; i < str.length(); i++) {
-			ch[i]=str.charAt(i);
-			if(i<str.length()-1){
-				if (ch[i]==ch[i+1]) {
-					String str1=str.substring(0,i);
-					String str2=str.substring(i+2);
-					str=str1+"Java"+str2;
-					System.out.println(str);
+	public static String replace(String str,String newStr) {
+		//分割字符
+		char[]arr=str.toCharArray();
+		//声明临时的字符串，用来合并替换
+		String tmp="";
+		//遍历数组
+		for (int i = 0; i < arr.length; i++) {			
+			char c=arr[i];
+			//判断是不是空串
+			if (tmp.length()==0) {
+				tmp+=c;
+			}else {
+				//tmp中是否包含c
+				if (tmp.contains(""+c)) {//如果包含c，继续合并
+					tmp+=c;
+					//判断是不是最后一位
+					if (i==arr.length-1) {
+						str=str.replace(tmp, newStr);
+					}
+				}else {//不包含c
+					if (tmp.length()>1) {//有叠词
+						//替换新的值
+						str=str.replace(tmp, newStr);
+					}else {
+						
+					}
+					tmp=c+"";//重新赋值				
 				}
 			}
 		}
+		return str;
 	}
 }
