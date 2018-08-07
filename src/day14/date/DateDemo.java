@@ -11,7 +11,6 @@ public class DateDemo {
 		 * Date是一个日期类
 		 * 		在类中可以获得当前系统时间
 		 * 		获取当前的时间戳，以毫秒为单位，开始时间：1970 01-01 00：00：00
-		 * 
 		 * */
 		//1.初始化一个date对象
 		Date d=new Date();
@@ -21,7 +20,7 @@ public class DateDemo {
 		long l=d.getTime();
 		System.out.println(l);
 		//4.通过时间戳创建对象
-		Date d1=new Date(1533613377168L);
+		Date d1=new Date(l);
 		System.out.println(d1.toString());
 		//5.获取一个日期格式化对象
 		DateFormat df=DateFormat.getDateInstance(DateFormat.FULL);//默认系统的格式
