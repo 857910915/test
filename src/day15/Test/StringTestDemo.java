@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StringTestDemo {
 	public static void main(String[] args) {
-		/*//初始化键盘录入对象
+		//初始化键盘录入对象
 		Scanner in=new Scanner(System.in);
 		System.out.print("请输入用户名:");
 		String name=in.next();
@@ -29,7 +29,7 @@ public class StringTestDemo {
 		while (!judgeQQ(qq)) {
 			System.out.println("请输入正确的QQ号码！");
 			qq=in.next();
-		}*/
+		}
 		//分割字符串
 		String str="11蒹葭苍苍,白鹭为霜,所谓伊人,再水一方1111";
 		cutString(str);
