@@ -122,6 +122,7 @@ public class StringTestDemo {
 		//声明临时的字符串，用来合并替换
 		String tmp="";
 		//遍历数组
+		
 		for (int i = 0; i < arr.length; i++) {			
 			char c=arr[i];
 			//判断是不是空串
