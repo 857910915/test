@@ -61,7 +61,7 @@ public class RegexDemo2 {
 		//关联操作字符串，返回一个Matche对象
 		Matcher m3=p3.matcher(scard);
 		//查找
-		if (m3.find()) {
+		if (m3.find()) {		
 			//捕获组
 			System.out.println("总共"+m3.groupCount()+"组");
 			for (int i = 1; i <=3; i++) {
