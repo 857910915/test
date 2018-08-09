@@ -56,6 +56,19 @@ public class DoubleLinklistDemo {
 		head.pre=node;
 		head=node;
 	}
+	//在指定位置添加
+	public void addNode(Node node,String name) {
+		Node tmp=head;
+		while (tmp!=null) {
+			
+			if (tmp.name.equals(name)) {
+				node.next=tmp.next;
+				tmp.next=node;
+				//node.pre=tmp;
+			}
+			tmp=tmp.next;
+		}
+	}
 	//打印所有信息
 	public void list() {
 		//遍历
@@ -81,6 +94,9 @@ public class DoubleLinklistDemo {
 		demo.addLast(new Node("秦时明月",22));
 		demo.addLast(new Node("天行九歌",22));
 		demo.addLast(new Node("夜尽天明",22));
+		demo.list();
+		System.out.println("-------在指定位置添加-------");
+		demo.addNode(new Node("诸子百家",12), "天行九歌");
 		demo.list();
 	}
 

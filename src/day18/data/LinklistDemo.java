@@ -1,7 +1,5 @@
 package day18.data;
 
-import javax.print.attribute.standard.PagesPerMinute;
-
 //节点类
 class Node{
 	//指向下个节点的引用

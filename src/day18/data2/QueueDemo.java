@@ -1,6 +1,5 @@
 package day18.data2;
-
-
+//队列
 //声明一个节点类
 class Node{
 	//节点
@@ -64,7 +63,7 @@ public class QueueDemo {
 	//在队列的尾部删除一个节点
 	public void popLast() {
 		Node node=foot.pre;
-		foot.next=null;
+		node.next=null;
 		foot=node;
 	}
 	//查看队列中所有元素
@@ -88,11 +87,15 @@ public class QueueDemo {
 		demo.pushLast(new Node("天行九歌"));
 		
 		demo.pushLast(new Node("三生三世"));
+		demo.pushLast(new Node("生生世世"));
 		demo.list();
 		//删除
 		demo.popFirst();
+		demo.popFirst();
+		demo.popLast();
 		demo.popLast();
 		System.out.println("-----------删除------------");
 		demo.list();
+		
 	}
 }
