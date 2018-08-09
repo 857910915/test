@@ -60,7 +60,7 @@ public class DoubleLinklistDemo {
 	public void list() {
 		//遍历
 		Node node=head;
-		while (node.next!=null) {
+		while (node!=null) {
 			node.toString();
 			node=node.next;
 		}
