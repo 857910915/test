@@ -2,7 +2,6 @@ package day19.collection;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.ListResourceBundle;
 
 public class LinkedListDemo {
 	/**
@@ -55,6 +54,5 @@ public class LinkedListDemo {
 		list.remove("清风明月");//删除首次出现的元素
 		System.out.println(list.toString());
 		//遍历删除必须使用迭代器
-		
 	}
 }
