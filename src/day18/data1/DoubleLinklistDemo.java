@@ -1,6 +1,5 @@
 package day18.data1;
 
-
 //节点类
 class Node{
 	//节点

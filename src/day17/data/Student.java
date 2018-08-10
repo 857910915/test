@@ -20,7 +20,7 @@ public class Student {
 		// TODO 自动生成的构造函数存根
 	}
 	public  Student(String name,int age) {
-		this.setAge(age);
-		this.setName(name);
+		this.name=name;
+		this.age=age;
 	}
 }
