@@ -10,6 +10,7 @@ public class VectorDemo {
 	 * 		1.底层实现是数组
 	 * 		2.实现了list接口
 	 * 		3.list接口  有序的，可以重复，可以有null值
+	 * 		4.支持多线程
 	 * */
 	
 	public static void main(String[] args) {
