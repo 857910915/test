@@ -1,6 +1,7 @@
 package day19.collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Vector;
 
 /**
@@ -69,14 +70,12 @@ public class ArrayListDemo {
 			if (string==null) {
 				continue;
 			}if (string.equals("尊")) {
-				list.set(i,"zjsz");
-				
+				list.set(i,"zjsz");			
 			}			
 		}
 		System.out.println(list.toString());
 		
-		//删除指定元素
-		
+		//删除指定元素		
 		//初始化对象
 		ArrayList<Student>list1=new ArrayList<Student>();
 		list1.add(new Student("qq"));
@@ -87,15 +86,44 @@ public class ArrayListDemo {
 			System.out.print(student.name+"  ");
 		}
 		System.out.println();
+		
 		//删除指定元素
 		//list.remove();
 		System.out.println("删除---------------");
-		for (int i = 0; i < list1.size(); i++) {
+		/*for (int i = 0; i < list1.size(); i++) {
 			Student student=list1.get(i);
 			if (student==null) {
 				continue;
 			}if (student.name.equals("qqz")) {
 				list1.remove(i);
+			}			
+		}*/
+		//foreach遍历删除
+		for (Student student : list1) {
+			//判断内容是否相等
+			if (student==null) {
+				continue;
+			}
+			//判断name
+			if (student.name.equals("qqa")) {
+				//list.remove(student);//无法删除				
+			}
+		}
+		//通过迭代器
+		//1.获取迭代器对象
+		Iterator<Student>it=list1.iterator(); //迭代器是一个副本
+		boolean result=it.hasNext();//判断迭代器中是否还有更多的元素
+		//取出下一个元素
+		/*Student stu1=it.next();//每调用一次next就取出一个元素
+		System.out.println("name==="+stu1.name);*/
+		for (; it.hasNext();) {
+			Student stu1 = it.next();
+			System.out.println("name==="+stu1.name);
+			//删除元素
+			if (stu1!=null) {
+				if (stu1.name.equals("qq")) {
+					it.remove();//删除当前指针指向的对象
+				}
 			}			
 		}
 		//查看
