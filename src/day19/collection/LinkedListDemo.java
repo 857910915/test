@@ -33,9 +33,9 @@ public class LinkedListDemo {
 		list.set(6, "一醉千年");
 		System.out.println(list.toString());
 		//查询
-		String element=list.poll();//取出head元素,同时删除元素
-		System.out.println(element);
-		System.out.println(list.pollFirst());
+		String str=list.poll();//取出head元素,同时删除元素
+		System.out.println(str);
+		System.out.println(list.pollFirst());//取出第一个元素，删除
 		System.out.println(list.getFirst());//取出第一个元素不删除
 		System.out.println(list.getLast());//取出最后一个元素
 		System.out.println(list.element());//取出第一个元素，不删除

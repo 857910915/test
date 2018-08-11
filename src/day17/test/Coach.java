@@ -28,7 +28,6 @@ public class Coach {
 		//遍历数组
 		int index=0;
 		for (Integer integer : players) {
-
 			if (integer!=null) {
 				if (integer==numbe) {
 					return index;
@@ -69,8 +68,7 @@ public class Coach {
 			Integer integer = players[i];
 			if (integer!=null) {
 				System.out.print(integer+" ");
-			}
-			
+			}			
 		}
 		System.out.println("]");
 	}
