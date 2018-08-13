@@ -61,7 +61,6 @@ public class ListTest {
 	System.out.println("LinkedList------------");
 	list1.toString();
 	System.out.println("查询-------------");
-	//System.out.println(list1.indexOf("亚亚"));
 	for (Dog dog : list1) {
 		if (dog.name.equals("亚亚")) {
 			System.out.println("存在");
