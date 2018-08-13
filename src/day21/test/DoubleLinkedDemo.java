@@ -24,7 +24,7 @@ public class DoubleLinkedDemo {
 	//属性
 	Nodes head=null;
 	Nodes foot=null;
-	//添加
+	//添加 从头
 	public void addNodesByHead(Nodes node) {
 		if (head==null) {
 			head=node;
@@ -35,6 +35,7 @@ public class DoubleLinkedDemo {
 		head.pre=node;
 		head=node;		
 	}
+	//删除  从未
 	
 	//遍历输出
 	public void list() {
