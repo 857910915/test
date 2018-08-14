@@ -40,6 +40,9 @@ public class FileTest {
 	public static void printAllFileInfo(File file) {
 		if (file.isDirectory()) {
 			File []lists=file.listFiles();
+			if (lists==null) {
+				return;
+			}
 			for (File file1 : lists) {
 				printAllFileInfo(file1);
 			}
@@ -79,6 +82,7 @@ public class FileTest {
 				editManyName(file2);
 			}
 		}else {
+			
 			if (file.getName().matches("\\d+.txt")) {
 				file.renameTo(new File(file.getParent(), "456.txt"));
 			}else {
