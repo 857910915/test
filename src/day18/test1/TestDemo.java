@@ -78,9 +78,6 @@ public class TestDemo {
 		demo.deleteHead();
 		demo.deleteFoot();
 		System.out.println("删除------------");
-		demo.list();
-		
-	}
-	
-	
+		demo.list();	
+	}	
 }

@@ -64,6 +64,7 @@ public class ListTest {
 	for (Dog dog : list1) {
 		if (dog.name.equals("亚亚")) {
 			System.out.println("存在");
+			break;
 		}
 	}
 	System.out.println("要删除的--------");
