@@ -22,8 +22,6 @@ public class StreamTest {
 		output.flush();
 		//关闭流
 		output.close();
-		input.close();
-		
-			
+		input.close();		
 	}
 }

@@ -13,7 +13,7 @@ public class FileOutputStreamDemo {
 		FileOutputStream output=new FileOutputStream(path,false);//代表追加
 		//2将内存中的数据，写入到一个指定的文件中
 		//2.1将数据写入流中
-		String str="你好!";
+		String str="你好!qqqqqqqqqqqqq";
 		//2.2将String类型转换成byte数组
 		byte[]b=str.getBytes("UTF-8");
 		//2.3写操作
