@@ -52,7 +52,7 @@ class Student implements Serializable{
 public class StudentSerialzable {
 	//序列化操作
 	public static void serializeOperation(ArrayList<Student>list) throws IOException {
-		//初始化对象，关联输出流
+		//初始化对象，关联字节输出流
 		FileOutputStream out=new FileOutputStream("C:\\Users\\Administrator\\Desktop\\Java1807\\Student.txt");
 		ObjectOutputStream oos=new ObjectOutputStream(out);
 		//序列化对象

@@ -44,7 +44,7 @@ public class TreeSetDemo {
 		}
 		//迭代器
 		System.out.println("迭代器---------------------");
-		for (Iterator iterator = set.iterator(); iterator.hasNext();) {
+		for (Iterator<Integer> iterator = set.iterator(); iterator.hasNext();) {
 			Integer integer = (Integer) iterator.next();
 			System.out.println(integer);
 		}
