@@ -38,6 +38,8 @@ public class SerializableDemo {
 		System.out.println(in.readBoolean());
 		Student stu=(Student)in.readObject();
 		System.out.println(stu.name+"  "+stu.age);
+		//关闭流
+		in.close();
 	}
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
 		writeObj();
