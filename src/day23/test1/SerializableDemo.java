@@ -26,7 +26,7 @@ class Dog implements Serializable{
 	}
 }
 //序列化操作
-public class SerialzableDemo {
+public class SerializableDemo {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		//创建输出对象。关联字节输入流

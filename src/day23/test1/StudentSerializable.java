@@ -49,7 +49,7 @@ class Student implements Serializable{
 		return super.toString();
 	}
 }
-public class StudentSerialzable {
+public class StudentSerializable {
 	//序列化操作
 	public static void serializeOperation(ArrayList<Student>list) throws IOException {
 		//初始化对象，关联字节输出流
