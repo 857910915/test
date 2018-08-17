@@ -1,7 +1,7 @@
 package day24.thread;
 //存在50个苹果,现在有请三个童鞋(小A,小B,小C)上台表演吃苹果.
 public class ThreadTest implements Runnable{
-	static int count=50;
+	int count=50;
 	@Override
 	public void run() {
 		// 吃苹果
