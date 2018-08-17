@@ -68,6 +68,6 @@ public class TimerDemo {
 		//取消timer内所有任务
 		//ts.cancel();
 		//清空已结束任务
-		System.out.println(timer.purge());
+		//System.out.println(timer.purge());
 	}
 }
