@@ -1,6 +1,7 @@
 package day25.thread;
 
 public class ThreadDemo3 implements Runnable{
+	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
 		for (int i = 0; i < 6; i++) {
@@ -24,5 +25,4 @@ public class ThreadDemo3 implements Runnable{
 		th2.start();
 		th3.start();
 	}
-
 }
