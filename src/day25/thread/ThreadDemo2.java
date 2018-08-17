@@ -6,6 +6,7 @@ public class ThreadDemo2 extends Thread{
 		System.out.println("运行状态："+Thread.currentThread().getState()+"\t激活："+Thread.currentThread().isAlive());
 	}
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) throws InterruptedException {
 		//初始化对象
 		ThreadDemo2 demo2=new ThreadDemo2();
