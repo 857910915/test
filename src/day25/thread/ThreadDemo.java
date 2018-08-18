@@ -3,7 +3,7 @@ package day25.thread;
 public class ThreadDemo extends Thread{
 	@Override
 	public void run() {
-		for (int i = 0; i < 120; i++) {
+		for (int i = 0; i < 10; i++) {
 			System.out.println(Thread.currentThread().getName()+"\t优先级："+Thread.currentThread().getPriority());
 			
 		}

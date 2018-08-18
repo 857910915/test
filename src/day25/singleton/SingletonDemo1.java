@@ -1,5 +1,5 @@
 package day25.singleton;
-//饱汉模式
+//饿汉模式
 public class SingletonDemo1 {
 	private static final SingletonDemo1 singleton=new SingletonDemo1();
 	//构造方法私有化

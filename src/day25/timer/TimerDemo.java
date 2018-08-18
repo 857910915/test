@@ -21,8 +21,9 @@ public class TimerDemo {
 		// 创建一个计时器对象，可以设置为守护线程+true
 		Timer timer=new Timer();
 		//添加执行的任务
-		//获取当前时间戳
+		//获取当前时间
 		Calendar c=Calendar.getInstance();
+		//当前时间转为时间戳
 		Long times=c.getTimeInMillis();
 		//3s后执行
 		times+=3*1000;

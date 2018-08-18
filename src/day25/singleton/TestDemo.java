@@ -48,5 +48,13 @@ public class TestDemo {
 				System.out.println(SingletonDemo.getIntance());
 			}
 		}).start();;
+		
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				System.out.println(SingletonDemo.getIntance());
+			}
+		}).start();;
 	}
 }

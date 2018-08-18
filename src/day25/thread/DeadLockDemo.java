@@ -1,4 +1,4 @@
-package day24.thread;
+package day25.thread;
 //死锁
 public class DeadLockDemo implements Runnable{
 	//全局变量

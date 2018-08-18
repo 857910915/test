@@ -11,6 +11,14 @@ public class TestDemo1 {
 				System.out.println(SingletonDemo1.getIntance());
 			}
 		}).start();
+		
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				System.out.println(SingletonDemo1.getIntance());
+			}
+		}).start();
 
 		new Thread(new Runnable() {
 
