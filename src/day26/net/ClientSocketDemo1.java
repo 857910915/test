@@ -14,13 +14,13 @@ public class ClientSocketDemo1 {
 		Socket client=new Socket("127.0.0.1",9898);
 		//发送数据
 		FileOutputStream out=(FileOutputStream) client.getOutputStream();
+		FileInputStream in=(FileInputStream) client.getInputStream();
 		out.write("Hello ServerSocket!".getBytes());
 		//刷入
 		out.flush();
 		//关闭流
-		out.close();
+		//out.close();
 		//接收数据
-		FileInputStream in=(FileInputStream) client.getInputStream();
 		//声明缓冲数组
 		byte[]buf=new byte[1024];
 		int len=0;
