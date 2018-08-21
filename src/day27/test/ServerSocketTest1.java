@@ -16,9 +16,9 @@ public class ServerSocketTest1 {
 		// 创建Socket对象
 		ServerSocket server=new ServerSocket(12123);
 		//监听客户端
-		System.out.println("等待链接。。。。");
+		System.out.println("等待链接。。。。\n");
 		Socket socket=server.accept();
-		System.out.println("已连接！");
+		System.out.println("已连接！\n");
 		//字符流
 		FileInputStream in=(FileInputStream) socket.getInputStream();
 		InputStreamReader reader=new InputStreamReader(in);
@@ -27,10 +27,11 @@ public class ServerSocketTest1 {
 		OutputStreamWriter writer=new OutputStreamWriter(out);
 		BufferedWriter bw=new BufferedWriter(writer);
 		//读取数据
-		//char[]c=new char[100];
-		while (br.ready()) {
-			System.out.println(br.readLine());
-			bw.write("欢迎下次连接，再见！");
+		String line;
+		while ((line=br.readLine())!=null) {
+			System.out.println(line);
+			bw.newLine();
+			bw.write("欢迎下次连接，再见！\n");
 			bw.flush();
 		}
 		//关闭连接

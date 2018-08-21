@@ -23,12 +23,14 @@ public class ClientSocketTest1 {
 		InputStreamReader reader=new InputStreamReader(in);
 		BufferedReader br=new BufferedReader(reader);
 		//发送数据
+		
 		bw.write("你好服务器！");
+		bw.newLine();
 		bw.flush();
 		//接收数据
-		//char[]c=new char[100];
-		while (br.ready()) {
-			System.out.println(br.readLine());
+		String line;
+		while ((line=br.readLine())!=null) {
+			System.out.println(line);
 		}
 		//关闭连接
 		socket.close();
