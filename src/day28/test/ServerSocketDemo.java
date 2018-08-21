@@ -19,7 +19,7 @@ class ChatService extends Thread{
 	private Socket socket;//socket连接对象
 	private BufferedWriter bw;//输出流
 	private String ip;//当前IP
-	
+
 	public ChatService(Socket socket) {
 		this.socket=socket;
 		//获取soaket的输出流
@@ -31,7 +31,7 @@ class ChatService extends Thread{
 			e.printStackTrace();
 		}	
 	}
-	
+
 	@Override
 	public void run() {
 		//线程体,专门接收
@@ -50,10 +50,16 @@ class ChatService extends Thread{
 				//存储数据
 				map.put("ip", arr[0]);
 				map.put("msg", arr[1]);
+				//将map保存到文件中				
 			}
 		}
 		System.out.println(map.toString());
 		return map;
+	}
+
+	//保存数据
+	public void saveMsg() {
+		
 	}
 	
 	//接收数据
@@ -70,7 +76,7 @@ class ChatService extends Thread{
 				//转发数据
 				OperationChat.getIstance().reSendMsg(map.get("ip"),this.ip+":"+map.get("msg"),this);
 			}
-		
+
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
@@ -81,7 +87,7 @@ class ChatService extends Thread{
 					br.close();
 					this.socket.close();
 					//移除
-					
+					OperationChat.getIstance().removeChat(this.ip);
 				} catch (IOException e) {
 					// TODO 自动生成的 catch 块
 					e.printStackTrace();
@@ -129,6 +135,7 @@ public class ServerSocketDemo {
 		}
 	}
 }
+
 /**
  * 保存所有的服务器端Socket连接对象
  * 数据的转发
@@ -140,9 +147,7 @@ class OperationChat{
 	//饿汉模型单例
 	private static final OperationChat operation=new OperationChat();
 	//构造方法私有化
-	private OperationChat() {
-		// TODO 自动生成的构造函数存根
-	}
+	private OperationChat() {}
 	//公开其对象的静态方法
 	public static synchronized OperationChat getIstance() {
 		return operation;
