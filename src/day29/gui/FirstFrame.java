@@ -51,13 +51,11 @@ public class FirstFrame {
 				// 处理事件
 				System.out.println(e.getSource());
 			}
-		});
-		
+		});		
 		//退出
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//显示主窗体
 		mainFrame.setVisible(true);
-
 	}
 
 }

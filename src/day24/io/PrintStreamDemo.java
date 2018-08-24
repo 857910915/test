@@ -7,7 +7,7 @@ import java.io.PrintStream;
 /**
  * PrintStream 打印输出流
  * 可以输出字节流，可以向不同的流中输出数据，自带换行符
- * 如果输入烦人是字符，使用PrintWriter，带编码格式
+ * 如果输入的是字符，使用PrintWriter，带编码格式
  * */
 public class PrintStreamDemo {
 

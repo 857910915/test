@@ -70,8 +70,8 @@ public class FileDemo {
 		File file2=new File("C:\\Users\\Administrator\\Desktop\\111.txt");
 		file2.createNewFile();//创建新的文件
 		file2.delete();//立即删除
-		file2.deleteOnExit();//当虚拟机停止后删除
-*/	}
+		file2.deleteOnExit();//当虚拟机停止后删除*/
+	}
 	//打印当前目录下所有层级的文件信息
 	public static void listAllFileInfo(File file) {
 		if (file.isDirectory()) {//测试此抽象路径名表示的文件是否为目录

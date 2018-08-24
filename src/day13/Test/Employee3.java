@@ -18,6 +18,7 @@ enum Weekday3{
 	//构造方法必须私有化
 	private Weekday3() {}
 }
+
 public class Employee3 {
 	//属性
 	private Weekday3 restday;
@@ -32,17 +33,17 @@ public class Employee3 {
 	//判断是否是休息日
 	public void restDay() {
 		switch (this.restday) {
-			case MON:
-			case	 TUES:
-			case WEDES:
-			case THURS:
-			case FRI:
-			case SATUR:
-				System.out.println("天天写代码");
-				break;
-			case SUN:
-				System.out.println("休息一天");
-				break;
+		case MON:
+		case	 TUES:
+		case WEDES:
+		case THURS:
+		case FRI:
+		case SATUR:
+			System.out.println("天天写代码");
+			break;
+		case SUN:
+			System.out.println("休息一天");
+			break;
 		}
 	}
 	public static void main(String[] args) {

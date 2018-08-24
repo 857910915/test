@@ -1,6 +1,6 @@
 package day10.Test2;
 //父类
-public abstract class Goods {
+public abstract class Goods{
 	//属性
 	private int price;
 	private String name;
